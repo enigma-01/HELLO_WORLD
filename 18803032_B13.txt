@@ -1,0 +1,38 @@
+//C FILE FOR BASIC FILE HANDLING OPERATIONS
+  
+# include <stdio.h>
+# include <string.h>
+   
+int main( )
+{
+    FILE *fp ;
+      
+    char data[20] = "18803032 AASTHA AHLAWAT B13";
+  
+    fp = fopen("First.c", "w") ;
+      
+
+    if ( fp == NULL )
+    {
+        printf( "FILE FAILED TO OPEN.\n" ) ;
+    }
+    else
+    {
+          
+        printf("OPENED.\n") ;
+         
+        if ( strlen (  data ) > 0 )
+        {
+              
+            fputs(data, fp) ;   
+            fputs("\n", fp) ;
+        }
+          
+ 
+        fclose(fp) ;
+          
+        printf("DATA HAS BEEN SUCCESSFULLY WRITTEN.\n");
+      
+    }
+    return 0;        
+}
